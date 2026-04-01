@@ -28,7 +28,7 @@ const Navbar = ({ cartItems = [] }) => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[50] mt-3 w-52 p-2 shadow-xl font-semibold border border-gray-100"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-xl font-semibold border border-gray-100"
             >
               <li>
                 <a>Products</a>
