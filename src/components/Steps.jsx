@@ -19,7 +19,11 @@ const Steps = () => {
           </div>
           <div className="card-body items-center text-center">
             <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-2 text-2xl">
-              <img src="/DigiTools/public/images/user.png" alt="" className="w-8 h-8 object-contain" />
+              <img
+                src="images/user.png"
+                alt=""
+                className="w-8 h-8 object-contain"
+              />
             </div>
             <h3 className="card-title font-bold text-[#1A1A2E]">
               Create Account
@@ -38,7 +42,7 @@ const Steps = () => {
           <div className="card-body items-center text-center">
             <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-2 text-2xl">
               <img
-                src="/DigiTools/public/images/package.png.png"
+                src="/images/package.png"
                 alt=""
                 className="w-8 h-8 object-contain"
               />
@@ -58,7 +62,11 @@ const Steps = () => {
           </div>
           <div className="card-body items-center text-center">
             <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-2 text-2xl">
-              <img src="/DigiTools/public/images/rocket.png" alt="" className="w-8 h-8 object-contain" />
+              <img
+                src="/images/rocket.png"
+                alt=""
+                className="w-8 h-8 object-contain"
+              />
             </div>
             <h3 className="card-title font-bold text-[#1A1A2E]">
               Start Creating

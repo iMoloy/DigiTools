@@ -3,9 +3,9 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      <div className="hero bg-base-200 min-h-screen py-10">
+      <div className="hero min-h-screen py-10">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src="/DigiTools/public/images/banner.png" className="rounded-lg shadow-2xl" />
+          <img src="/images/banner.png" className="rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">
               Supercharge Your <br />
@@ -22,7 +22,7 @@ const Hero = () => {
                 Explore Products
               </button>
               <button className="btn border-primary rounded-4xl text-primary">
-                <img src="/DigiTools/public/images/Play.png" className="" />
+                <img src="/images/Play.png" className="" />
                 Watch Demo
               </button>
             </div>
