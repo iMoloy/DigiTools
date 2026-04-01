@@ -8,7 +8,7 @@
     "tag": "Popular",
     "tagType": "Popular",
     "features": ["1000+ templates", "Drag & drop editor", "Export to PNG/PDF"],
-    "icon": "../src/assets/products/design-tool.png"
+    "icon": "../public/images/design-tool.png"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "tag": "Best Seller",
     "tagType": "Best Seller",
     "features": ["Notes & docs", "Task management", "Collaboration tools"],
-    "icon": "../src/assets/products/writing.png"
+    "icon": "../public/images/writing.png"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "tag": "Popular",
     "tagType": "Popular",
     "features": ["Real-time collaboration", "Prototyping", "Design systems"],
-    "icon": "../src/assets/products/operation.png"
+    "icon": "../public/images/operation.png"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "tag": "New",
     "tagType": "New",
     "features": ["GPT-4 access", "Faster response", "Priority access"],
-    "icon": "../src/assets/products/social-media.png"
+    "icon": "../public/images/social-media.png"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "tag": "Popular",
     "tagType": "Popular",
     "features": ["Grammar check", "Tone detection", "Plagiarism checker"],
-    "icon": "../src/assets/products/portfolio.png"
+    "icon": "../public/images/portfolio.png"
   },
   {
     "id": 6,
@@ -63,6 +63,6 @@
     "tag": "Best Seller",
     "tagType": "Best Seller",
     "features": ["Advanced editing tools", "Layer support", "RAW processing"],
-    "icon": "../src/assets/products/camera.png"
+    "icon": "../public/images/camera.png"
   }
 ]

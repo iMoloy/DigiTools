@@ -1,7 +1,4 @@
 import React from "react";
-import userPic from "../assets/user.png";
-import userPackage from "../assets/package.png";
-import userRocket from "../assets/rocket.png";
 
 const Steps = () => {
   return (
@@ -22,7 +19,7 @@ const Steps = () => {
           </div>
           <div className="card-body items-center text-center">
             <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-2 text-2xl">
-              <img src={userPic} alt="" className="w-8 h-8 object-contain" />
+              <img src="/DigiTools/public/images/user.png" alt="" className="w-8 h-8 object-contain" />
             </div>
             <h3 className="card-title font-bold text-[#1A1A2E]">
               Create Account
@@ -41,7 +38,7 @@ const Steps = () => {
           <div className="card-body items-center text-center">
             <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-2 text-2xl">
               <img
-                src={userPackage}
+                src="/DigiTools/public/images/package.png.png"
                 alt=""
                 className="w-8 h-8 object-contain"
               />
@@ -61,7 +58,7 @@ const Steps = () => {
           </div>
           <div className="card-body items-center text-center">
             <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-2 text-2xl">
-              <img src={userRocket} alt="" className="w-8 h-8 object-contain" />
+              <img src="/DigiTools/public/images/rocket.png" alt="" className="w-8 h-8 object-contain" />
             </div>
             <h3 className="card-title font-bold text-[#1A1A2E]">
               Start Creating
