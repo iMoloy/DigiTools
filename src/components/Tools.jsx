@@ -70,7 +70,7 @@ const Tools = ({ tools, activeTab, setActiveTab, cartItems, setCartItems }) => {
                           alt="icon"
                           className="w-8 h-8 object-contain"
                         />
-                        <span className="badge badge-primary badge-outline text-xs">
+                        <span className="badge bg-primary badge-sm text-white text-xs rounded-full w-20">
                           {tool.tagType}
                         </span>
                       </div>

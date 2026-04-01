@@ -19,7 +19,7 @@ const Pricing = () => {
             <p className="text-sm text-gray-500 mb-4">
               Perfect for getting started
             </p>
-            <h2 className="text-5xl font-extrabold mb-6">
+            <h2 className="text-4xl font-extrabold mb-6">
               $0
               <span className="text-lg font-normal text-gray-400">/Month</span>
             </h2>
@@ -52,7 +52,7 @@ const Pricing = () => {
             <p className="text-primary-content text-sm mb-4">
               Best for professionals
             </p>
-            <h2 className="text-5xl font-extrabold mb-6">
+            <h2 className="text-4xl font-extrabold mb-6">
               $29
               <span className="text-lg font-normal text-primary-content">
                 /Month
@@ -89,7 +89,7 @@ const Pricing = () => {
             <p className="text-sm text-gray-500 mb-4">
               For teams and businesses
             </p>
-            <h2 className="text-5xl font-extrabold mb-6">
+            <h2 className="text-4xl font-extrabold mb-6">
               $99
               <span className="text-lg font-normal text-gray-400">/Month</span>
             </h2>
@@ -113,7 +113,7 @@ const Pricing = () => {
                 <span className="text-success">✔</span> Custom branding
               </li>
             </ul>
-            <button className="btn btn-outline btn-primary w-full rounded-full">
+            <button className="btn btn-primary w-full rounded-full">
               Contact Sales
             </button>
           </div>

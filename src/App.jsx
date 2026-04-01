@@ -8,6 +8,7 @@ import Tools from "./components/Tools";
 import Steps from "./components/Steps";
 import Pricing from "./components/Pricing";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 
 function App() {
   const [activeTab, setActiveTab] = useState("tool");
@@ -35,7 +36,8 @@ function App() {
       />
       <Steps />
       <Pricing />
-      <Banner/>
+      <Banner />
+      <Footer />
 
       <ToastContainer position="top-right" autoClose={2000} />
     </>
