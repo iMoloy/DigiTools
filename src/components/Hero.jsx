@@ -36,12 +36,12 @@ const Hero = () => {
           <h2 className="text-4xl text-white font-bold">50K</h2>
           <p className="text-white font-semibold">Active Users</p>
         </div>
-        <div class="w-px h-auto bg-white/40"></div>
+        <div className="w-px h-auto bg-white/40"></div>
         <div className="tools text-center">
           <h2 className="text-4xl text-white font-bold">200+</h2>
           <p className="text-white font-semibold">Premium Tools</p>
         </div>
-        <div class="w-px h-auto bg-white/40"></div>
+        <div className="w-px h-auto bg-white/40"></div>
         <div className="ratings text-center">
           <h2 className="text-4xl text-white font-bold">4.9</h2>
           <p className="text-white font-semibold">Ratings</p>

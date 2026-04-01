@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Canva",
+    "description": "Design graphics, presentations, and social media posts\nEasy drag-and-drop editor for beginners",
+    "price": 75,
+    "period": "Monthly",
+    "tag": "Popular",
+    "tagType": "Popular",
+    "features": ["1000+ templates", "Drag & drop editor", "Export to PNG/PDF"],
+    "icon": "../src/assets/products/design-tool.png"
+  },
+  {
+    "id": 2,
+    "name": "Notion",
+    "description": "All-in-one workspace for notes and productivity\nManage tasks, docs, and databases easily",
+    "price": 25,
+    "period": "Monthly",
+    "tag": "Best Seller",
+    "tagType": "Best Seller",
+    "features": ["Notes & docs", "Task management", "Collaboration tools"],
+    "icon": "../src/assets/products/writing.png"
+  },
+  {
+    "id": 3,
+    "name": "Figma",
+    "description": "UI/UX design and prototyping tool\nCollaborate in real-time with teams",
+    "price": 50,
+    "period": "Yearly",
+    "tag": "Popular",
+    "tagType": "Popular",
+    "features": ["Real-time collaboration", "Prototyping", "Design systems"],
+    "icon": "../src/assets/products/operation.png"
+  },
+  {
+    "id": 4,
+    "name": "ChatGPT Plus",
+    "description": "Advanced AI assistant for coding and writing\nFaster responses and better models",
+    "price": 20,
+    "period": "Monthly",
+    "tag": "New",
+    "tagType": "New",
+    "features": ["GPT-4 access", "Faster response", "Priority access"],
+    "icon": "../src/assets/products/social-media.png"
+  },
+  {
+    "id": 5,
+    "name": "Grammarly",
+    "description": "AI writing assistant for grammar and clarity\nImprove writing across apps and browsers",
+    "price": 120,
+    "period": "Yearly",
+    "tag": "Popular",
+    "tagType": "Popular",
+    "features": ["Grammar check", "Tone detection", "Plagiarism checker"],
+    "icon": "../src/assets/products/portfolio.png"
+  },
+  {
+    "id": 6,
+    "name": "Adobe Photoshop",
+    "description": "Professional photo editing and design software\nIndustry standard for creatives",
+    "price": 22,
+    "period": "Monthly",
+    "tag": "Best Seller",
+    "tagType": "Best Seller",
+    "features": ["Advanced editing tools", "Layer support", "RAW processing"],
+    "icon": "../src/assets/products/camera.png"
+  }
+]
