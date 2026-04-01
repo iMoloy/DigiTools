@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Tools from "./components/Tools";
 import Steps from "./components/Steps";
+import Pricing from "./components/Pricing";
 
 function App() {
   const [activeTab, setActiveTab] = useState("tool");
@@ -31,7 +32,8 @@ function App() {
         cartItems={cartItems}
         setCartItems={setCartItems}
       />
-      <Steps/>
+      <Steps />
+      <Pricing />
 
       <ToastContainer position="top-right" autoClose={2000} />
     </>
