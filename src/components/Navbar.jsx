@@ -1,9 +1,9 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ cartItems = [] }) => {
   return (
     <>
-      <div className="navbar bg-base-100 w-11/12 mx-auto">
+      <div className="navbar bg-base-100 w-11/12 mx-auto mt-2">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -14,13 +14,12 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
@@ -81,20 +80,21 @@ const Navbar = () => {
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
-                    {" "}
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
                       d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                    />{" "}
+                    />
                   </svg>
-                  <span className="badge badge-xs indicator-item">0</span>
+                  <span className="badge badge-xs indicator-item badge-primary text-white">
+                    {cartItems.length}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-          <a className="font-semibold">Login</a>
+          <a className="font-semibold hidden sm:flex cursor-pointer">Login</a>
           <a className="btn btn-primary rounded-4xl">Get Started</a>
         </div>
       </div>

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -7,6 +9,8 @@ import Tools from "./components/Tools";
 function App() {
   const [activeTab, setActiveTab] = useState("tool");
   const [tools, setTools] = useState([]);
+
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     fetch("/tools.json")
@@ -17,9 +21,17 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar cartItems={cartItems} />
       <Hero />
-      <Tools tools={tools} activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Tools
+        tools={tools}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+      />
+
+      <ToastContainer position="top-right" autoClose={2000} />
     </>
   );
 }
