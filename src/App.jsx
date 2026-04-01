@@ -1,21 +1,25 @@
+import { useState, useEffect } from "react";
 import "./App.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Tools from "./components/Tools";
 
-const getTools = async () => {
-  const res = await fetch("../public/tools.json");
-  return res.json();
-};
-
-const toolsPromise = getTools();
-
 function App() {
+  const [activeTab, setActiveTab] = useState("tool");
+  const [tools, setTools] = useState([]);
+
+  useEffect(() => {
+    fetch("/tools.json")
+      .then((res) => res.json())
+      .then((data) => setTools(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <>
       <Navbar />
       <Hero />
-      <Tools toolsPromise={toolsPromise} />
+      <Tools tools={tools} activeTab={activeTab} setActiveTab={setActiveTab} />
     </>
   );
 }
