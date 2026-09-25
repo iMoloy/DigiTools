@@ -1,116 +1,85 @@
 import React from "react";
+import { Sparkles, ShoppingBag, Terminal, Shield, ArrowUpRight } from "lucide-react";
 
-const Navbar = ({ cartItems = [] }) => {
+const Navbar = ({ cartItems = [], onOpenCart }) => {
   return (
-    <>
-      <div className="navbar bg-base-100 w-11/12 mx-auto mt-2 p-0 md:p-2">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost p-0 pr-3 lg:hidden"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+    <header className="sticky top-0 z-50 px-4 pt-3 pb-2 backdrop-blur-xl bg-[#0B0F17]/70 border-b border-white/5 transition-all">
+      <div className="w-11/12 mx-auto flex items-center justify-between">
+        {/* Brand */}
+        <div className="flex items-center gap-3">
+          <a
+            href="#"
+            className="flex items-center gap-2.5 text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-cyan-400 hover:opacity-90 transition"
+          >
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25">
+              <Sparkles className="w-5 h-5" />
             </div>
-            <ul
-              tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-xl font-semibold border border-gray-100"
-            >
-              <li>
-                <a>Products</a>
-              </li>
-              <li>
-                <a>Features</a>
-              </li>
-              <li>
-                <a>Pricing</a>
-              </li>
-              <li>
-                <a>Testimonies</a>
-              </li>
-              <li>
-                <a>FAQ</a>
-              </li>
-            </ul>
-          </div>
-          <a className="text-2xl md:text-3xl text-primary font-extrabold">
-            DigiTools
+            <span>DigiTools</span>
           </a>
+          <span className="hidden sm:inline-block badge badge-sm bg-indigo-500/10 text-indigo-300 border-indigo-500/30 font-medium">
+            Suite 2.5
+          </span>
         </div>
 
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-semibold">
-            <li>
-              <a>Products</a>
-            </li>
-            <li>
-              <a>Features</a>
-            </li>
-            <li>
-              <a>Pricing</a>
-            </li>
-            <li>
-              <a>Testimonies</a>
-            </li>
-            <li>
-              <a>FAQ</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="navbar-end gap-1 md:gap-3">
-          <div className="font-semibold">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle"
-            >
-              <div className="indicator">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 md:h-6 md:w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-                <span className="badge badge-xs md:badge-sm indicator-item badge-primary text-white">
-                  {cartItems.length}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <a className="font-semibold hidden sm:flex cursor-pointer hover:text-primary transition">
-            Login
+        {/* Center Nav Links */}
+        <nav className="hidden lg:flex items-center gap-1 bg-slate-900/60 border border-slate-800/80 px-3 py-1.5 rounded-full backdrop-blur-md shadow-inner text-sm font-semibold">
+          <a
+            href="#utilities"
+            className="px-4 py-1.5 rounded-full text-white hover:bg-slate-800/60 transition flex items-center gap-1.5"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+            Web Utilities
+            <span className="badge badge-xs bg-emerald-500/20 text-emerald-400 border-none font-bold">
+              NEW
+            </span>
           </a>
+          <a
+            href="#marketplace"
+            className="px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-slate-800/60 transition"
+          >
+            Catalog
+          </a>
+          <a
+            href="#steps"
+            className="px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-slate-800/60 transition"
+          >
+            Workflow
+          </a>
+          <a
+            href="#pricing"
+            className="px-4 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-slate-800/60 transition"
+          >
+            Pricing
+          </a>
+        </nav>
 
-          <a className="btn btn-sm md:btn-md btn-primary rounded-full text-white px-4 md:px-6">
-            Get Started
+        {/* Right Actions */}
+        <div className="flex items-center gap-3">
+          {/* Cart Icon */}
+          <button
+            onClick={onOpenCart}
+            className="btn btn-circle btn-ghost text-slate-300 hover:text-white relative bg-slate-900/50 border border-slate-800/60 hover:bg-slate-800"
+            title="View Cart"
+          >
+            <ShoppingBag className="w-5 h-5" />
+            {cartItems.length > 0 && (
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-indigo-500 text-white text-[11px] font-bold flex items-center justify-center shadow-lg shadow-indigo-500/50 animate-pulse">
+                {cartItems.length}
+              </span>
+            )}
+          </button>
+
+          {/* Quick Launch CTA */}
+          <a
+            href="#utilities"
+            className="btn btn-sm md:btn-md bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold border-none rounded-full px-5 shadow-lg shadow-indigo-500/20 flex items-center gap-1.5 text-xs md:text-sm"
+          >
+            Launch Tools
+            <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
       </div>
-    </>
+    </header>
   );
 };
 

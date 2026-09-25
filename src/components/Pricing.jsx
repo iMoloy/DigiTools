@@ -1,125 +1,159 @@
 import React from "react";
+import { Check, Sparkles, Shield, Zap } from "lucide-react";
 
 const Pricing = () => {
   return (
-    <div className="bg-base-200/30 py-20">
+    <section id="pricing" className="py-24 relative scroll-mt-20">
       <div className="w-11/12 mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-3 text-[#1A1A2E]">
-            Simple, Transparent Pricing
+        <div className="text-center mb-16 space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-wider">
+            <Zap className="w-3.5 h-3.5" />
+            Transparent Subscriptions
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">
+            Flexible Plans for Any Scale
           </h2>
-          <p className="text-gray-500">
-            Choose the plan that fits your needs. Upgrade or downgrade anytime.
+          <p className="text-sm md:text-base text-slate-400 max-w-xl mx-auto">
+            Interactive web tools are always 100% free. Choose a license plan for premium cloud sync and team assets.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 items-center max-w-6xl mx-auto">
-          <div className="card bg-base-100 shadow-sm border border-gray-100 p-6">
-            <h3 className="text-xl font-bold text-[#1A1A2E]">Starter</h3>
-            <p className="text-sm text-gray-500 mb-4">
-              Perfect for getting started
-            </p>
-            <h2 className="text-4xl font-extrabold mb-6">
-              $0
-              <span className="text-lg font-normal text-gray-400">/Month</span>
-            </h2>
-            <ul className="space-y-3 mb-8 text-sm text-gray-600">
-              <li className="flex items-center gap-2">
-                <span className="text-success">✔</span> Access to 10 free tools
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-success">✔</span> Basic templates
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-success">✔</span> Community support
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-success">✔</span> 1 project per month
-              </li>
-            </ul>
-            <button className="btn btn-primary w-full rounded-full">
-              Get Started Free
+        <div className="grid md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+          {/* Starter Tier */}
+          <div className="rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-xl p-8 flex flex-col justify-between hover:border-slate-700 transition">
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-bold text-white">Starter</h3>
+                <p className="text-xs text-slate-400 mt-1">
+                  Perfect for individuals & casual creators
+                </p>
+              </div>
+
+              <div className="flex items-baseline gap-1 py-2">
+                <span className="text-4xl font-black text-white">$0</span>
+                <span className="text-xs text-slate-400">/ forever free</span>
+              </div>
+
+              <ul className="space-y-3 text-xs text-slate-300 pt-4 border-t border-slate-800">
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Unlimited in-browser web utilities</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Image compressor (WebP, PNG, JPG)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>HTML/CSS/JS/JSON code formatter</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Smart local NLP text engine</span>
+                </li>
+              </ul>
+            </div>
+
+            <button className="btn btn-outline border-slate-700 hover:border-slate-500 hover:bg-slate-800/50 text-slate-200 rounded-2xl w-full mt-8">
+              Start Free Now
             </button>
           </div>
 
-          <div className="card bg-primary text-white shadow-xl relative p-6 scale-105 z-10">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <span className="badge bg-amber-100 border-none text-amber-700 font-bold px-4 py-3 shadow-md">
-                Most Popular
+          {/* Pro Tier (Featured / Most Popular) */}
+          <div className="rounded-3xl bg-gradient-to-b from-indigo-950/80 via-slate-900/90 to-purple-950/70 border border-indigo-500/50 backdrop-blur-2xl p-8 flex flex-col justify-between relative shadow-2xl shadow-indigo-500/10 ring-1 ring-indigo-500/50 scale-105 z-10">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+              <span className="badge bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-extrabold text-[11px] px-3.5 py-2.5 border-none shadow-md">
+                MOST POPULAR
               </span>
             </div>
-            <h3 className="text-xl font-bold mt-4">Pro</h3>
-            <p className="text-primary-content text-sm mb-4">
-              Best for professionals
-            </p>
-            <h2 className="text-4xl font-extrabold mb-6">
-              $29
-              <span className="text-lg font-normal text-primary-content">
-                /Month
-              </span>
-            </h2>
-            <ul className="space-y-3 mb-8 text-sm">
-              <li className="flex items-center gap-2">
-                <span className="text-white">✔</span> Access to all premium
-                tools
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-white">✔</span> Unlimited templates
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-white">✔</span> Priority support
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-white">✔</span> Unlimited projects
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-white">✔</span> Cloud sync
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-white">✔</span> Advanced analytics
-              </li>
-            </ul>
-            <button className="btn bg-white text-primary hover:bg-gray-100 border-none w-full rounded-full">
-              Start Pro Trial
+
+            <div className="space-y-4 pt-2">
+              <div>
+                <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                  Pro Creator
+                  <Sparkles className="w-4 h-4 text-indigo-400" />
+                </h3>
+                <p className="text-xs text-indigo-200/70 mt-1">
+                  Best for power developers & professional designers
+                </p>
+              </div>
+
+              <div className="flex items-baseline gap-1 py-2">
+                <span className="text-4xl font-black text-white">$29</span>
+                <span className="text-xs text-indigo-200/70">/ month</span>
+              </div>
+
+              <ul className="space-y-3 text-xs text-slate-200 pt-4 border-t border-indigo-900/60">
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Everything in Starter included</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Google Gemini 1.5 Flash unlimited AI queries</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Batch image compression without limits</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Full access to 200+ premium digital assets</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Priority 24/7 dedicated assistance</span>
+                </li>
+              </ul>
+            </div>
+
+            <button className="btn bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-none rounded-2xl w-full mt-8 shadow-xl shadow-indigo-500/30 font-bold">
+              Start 14-Day Free Trial
             </button>
           </div>
 
-          <div className="card bg-base-100 shadow-sm border border-gray-100 p-6">
-            <h3 className="text-xl font-bold text-[#1A1A2E]">Enterprise</h3>
-            <p className="text-sm text-gray-500 mb-4">
-              For teams and businesses
-            </p>
-            <h2 className="text-4xl font-extrabold mb-6">
-              $99
-              <span className="text-lg font-normal text-gray-400">/Month</span>
-            </h2>
-            <ul className="space-y-3 mb-8 text-sm text-gray-600">
-              <li className="flex items-center gap-2">
-                <span className="text-success">✔</span> Everything in Pro
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-success">✔</span> Team collaboration
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-success">✔</span> Custom integrations
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-success">✔</span> Dedicated support
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-success">✔</span> SLA guarantee
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-success">✔</span> Custom branding
-              </li>
-            </ul>
-            <button className="btn btn-primary w-full rounded-full">
-              Contact Sales
+          {/* Enterprise Tier */}
+          <div className="rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-xl p-8 flex flex-col justify-between hover:border-slate-700 transition">
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-bold text-white">Enterprise</h3>
+                <p className="text-xs text-slate-400 mt-1">
+                  For engineering teams and creative agencies
+                </p>
+              </div>
+
+              <div className="flex items-baseline gap-1 py-2">
+                <span className="text-4xl font-black text-white">$99</span>
+                <span className="text-xs text-slate-400">/ month</span>
+              </div>
+
+              <ul className="space-y-3 text-xs text-slate-300 pt-4 border-t border-slate-800">
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Everything in Pro for up to 25 seats</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Custom API endpoints & Webhooks</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>SOC-2 compliance & SLA guarantee</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Dedicated account manager</span>
+                </li>
+              </ul>
+            </div>
+
+            <button className="btn btn-outline border-slate-700 hover:border-slate-500 hover:bg-slate-800/50 text-slate-200 rounded-2xl w-full mt-8">
+              Contact Enterprise
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
